@@ -1,4 +1,7 @@
 fun main(){
+
+    // Escreva um programa que peça 2 frases e verifique se elas são anagramas
+
     println("informe a primeira frase")
     var fraseUm = readLine() ?: ""
 

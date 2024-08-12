@@ -1,4 +1,7 @@
 fun main(){
+
+    // Escreva um programa que peça uma frase e verifique se ela é um palindromo
+
     println("informe uma frase")
     val frase = readLine() ?: ""
 

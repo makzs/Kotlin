@@ -1,4 +1,8 @@
 fun main(){
+
+    // Desenvolva um programa que peça ao usuario para inserir um texto e dois indices
+    // O programa deve extrair e exibir a subtring correpondente aos indices fornecidos
+
     println("informe uma frase")
     var frase = readLine() ?: ""
 

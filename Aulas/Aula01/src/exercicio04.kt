@@ -1,4 +1,7 @@
 fun main(){
+
+    // Escreva um programa que peça uma frase e substitua os espaços por hifens
+
     println("informe uma frase")
     var frase = readLine() ?: ""
 

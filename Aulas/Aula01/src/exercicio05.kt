@@ -1,4 +1,7 @@
 fun main(){
+
+    // Escreva um programa que calcule a media de 3 numeros
+
     println("Informe o numero 1: ")
     var num1 = readLine()?.toFloatOrNull() ?: 0.1f
 
