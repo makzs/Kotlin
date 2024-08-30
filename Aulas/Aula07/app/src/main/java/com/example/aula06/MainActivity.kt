@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var txtInputDolar : TextInputLayout
     private lateinit var txtDolar : TextInputEditText
 
-    private lateinit var btnConversor : Button
+    private lateinit var btnConversorRealDolar : Button
+    private lateinit var btnConversorDolarReal : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,13 +36,21 @@ class MainActivity : AppCompatActivity() {
         txtReal = findViewById(R.id.txtReal)
         txtDolar = findViewById(R.id.txtDolar)
 
-        btnConversor = findViewById(R.id.btnConversor)
+        btnConversorRealDolar = findViewById(R.id.btnConversorRealDolar)
+        btnConversorDolarReal = findViewById(R.id.btnConversorDolarReal)
 
-        btnConversor.setOnClickListener {
+        btnConversorRealDolar.setOnClickListener {
             var valorReal = txtReal.text.toString()
             var valorDolar = valorReal.toFloat() / 5.6f
 
             txtDolar.setText("$valorDolar")
+        }
+
+        btnConversorDolarReal.setOnClickListener {
+            var valorDolar = txtDolar.text.toString()
+            var valorReal = valorDolar.toFloat() * 5.6f
+
+            txtReal.setText("$valorReal")
         }
     }
 }
