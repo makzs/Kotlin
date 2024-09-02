@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Calculadora</string>
+    <string name="Resultado" />
+    <string name="Valor1">valor1</string>
+    <string name="valor2">valor2\n</string>
+    <string name="Resultadp">Resultado</string>
 </resources>
