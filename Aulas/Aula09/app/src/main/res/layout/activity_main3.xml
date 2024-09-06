@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:id="@+id/txtLivro"
+        android:layout_width="185dp"
+        android:layout_height="43dp"
+        android:text="Livro X"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <TextView
+        android:id="@+id/txtLivroTitulo"
+        android:layout_width="268dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="230dp"
+        android:text="Titulo"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtLivroAutor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtLivroAutor"
+        android:layout_width="256dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="240dp"
+        android:text="Autor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtLivroAno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLivroTitulo"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtLivroAno"
+        android:layout_width="264dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="250dp"
+        android:text="Ano"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLivroAutor"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnVoltar2"
+        android:layout_width="255dp"
+        android:layout_height="48dp"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLivroAno" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
