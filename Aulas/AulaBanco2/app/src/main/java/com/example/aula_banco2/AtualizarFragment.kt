@@ -6,16 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.aula_banco2.Data.Livro
 import com.example.aula_banco2.Data.LivroViewModel
 import com.google.android.material.textfield.TextInputEditText
 
-class AddFragment : Fragment() {
+
+class AtualizarFragment : Fragment() {
 
     lateinit var btnVoltar : Button
-    lateinit var btnAdicionar : Button
+    lateinit var btnAtualizar : Button
     lateinit var txtEditNomeLivro : TextInputEditText
     lateinit var livroViewModel : LivroViewModel
 
@@ -23,45 +22,24 @@ class AddFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_add, container, false)
+        val view = inflater.inflate(R.layout.fragment_atualizar, container, false)
 
         btnVoltar = view.findViewById(R.id.btnVoltar)
-        btnAdicionar = view.findViewById(R.id.btnAdicionar)
+        btnAtualizar = view.findViewById(R.id.btnAtualizar)
         txtEditNomeLivro = view.findViewById(R.id.txtEditNomeLivro)
         livroViewModel = ViewModelProvider(this).get(LivroViewModel::class.java)
 
+        val nome : String = arguments?.getString("nome") ?: "erro"
+
+        txtEditNomeLivro.setText("$nome")
+
+
+
         btnVoltar.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, ListFragment())
-                .commit()
-
-        }
-
-        btnAdicionar.setOnClickListener {
-            addLivro()
+            voltar()
         }
 
         return view
-    }
-
-    fun addLivro(){
-        //pegar o texto
-
-        val nome = txtEditNomeLivro.text.toString()
-
-        //criar um livro
-
-        val novoLivro = Livro(0, nome, 1900)
-
-        //adicionar no banco
-
-        livroViewModel.addLivro(novoLivro)
-
-        Toast.makeText(requireContext(), "Livro Adicionado", Toast.LENGTH_SHORT).show()
-
-        //voltar para a tela
-        voltar()
     }
 
     fun voltar(){
